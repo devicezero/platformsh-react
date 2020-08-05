@@ -1,0 +1,14 @@
+name: react
+type: nodejs:14
+
+hooks:
+  build: |
+      npm run build
+
+disk: 128
+
+web:
+  locations:
+    '/':
+      root: 'build'
+      passthru: '/index.html'
